@@ -1,1 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armenia Visa & Travel</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/500.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5/700.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/700.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-armenian@5/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-armenian@5/500.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-armenian@5/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-armenian@5/700.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 50: '#e8edf5', 100: '#c5d0e6', 200: '#9aaed5', 300: '#6f8cc4', 400: '#5071b7', 500: '#3055a9', 600: '#2c4e9b', 700: '#26448a', 800: '#1f3772', 900: '#1a2744', 950: '#0f1628' },
+                        gold: { 50: '#fdf8eb', 100: '#f9edc8', 200: '#f3db94', 300: '#ebc55a', 400: '#e3af2e', 500: '#d4a843', 600: '#b8882f', 700: '#966928', 800: '#7a5426', 900: '#654423' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Armenian', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', 'Noto Sans Armenian', sans-serif; }
 
+        /* Language-specific fonts */
+        [data-lang="hy"] { font-family: 'Noto Sans Armenian', 'Inter', sans-serif; }
+        [data-lang="ru"] { font-family: 'Inter', 'Noto Sans Armenian', sans-serif; }
+
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(212, 168, 67, 0); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes plane-fly {
+            0% { transform: translate(-100px, 100px) rotate(45deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(calc(100vw + 100px), -100px) rotate(45deg); opacity: 0; }
+        }
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(212, 168, 67, 0.3); }
+            50% { border-color: rgba(212, 168, 67, 0.8); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1);
+        }
+        .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+        /* Hero background pattern */
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(212, 168, 67, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 168, 67, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(48, 85, 169, 0.1) 0%, transparent 50%);
+        }
+
+        /* Gold gradient text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #d4a843 0%, #f3db94 50%, #d4a843 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover effects */
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4a843, transparent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(26, 39, 68, 0.3);
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a843 0%, #b8882f 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 168, 67, 0.4);
+        }
+
+        /* Floating elements */
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-element.delay {
+            animation-delay: 2s;
+        }
+        .floating-element.delay2 {
+            animation-delay: 4s;
+        }
+
+        /* Plane animation */
+        .plane-fly {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        /* Navbar */
+        .navbar-scrolled {
+            background: rgba(26, 39, 68, 0.95) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Counter animation */
+        .counter-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Testimonial slider */
+        .testimonial-track {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f1628; }
+        ::-webkit-scrollbar-thumb { background: #d4a843; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ebc55a; }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Globe dots pattern */
+        .globe-pattern {
+            background-image: radial-gradient(circle, rgba(212, 168, 67, 0.15) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Language switcher */
+        .lang-btn {
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background: #d4a843;
+            color: #1a2744;
+            font-weight: 600;
+        }
+        .lang-btn:hover:not(.active) {
+            background: rgba(212, 168, 67, 0.2);
+        }
+
+        /* Process steps */
+        .step-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #d4a843, transparent);
+            transform: translateX(-50%);
+        }
+
+        /* Instagram gradient */
+        .instagram-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        /* Parallax section */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .parallax-bg { background-attachment: scroll; }
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-white overflow-x-hidden">
+
+    <!-- Plane Animation Background -->
+    <div class="plane-fly" id="planeAnim">
+        <svg viewBox="0 0 100 100" fill="rgba(212,168,67,0.3)">
+            <path d="M21,16V2l5,12H51l4.89-12L80,52L50,68l-4.89-12H26l-5,12V52L2,28L21,16Z"/>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="relative">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute inset-0 rounded-full bg-gold-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300"></div>
+                    </div>
+                    <div>
+                        <span class="text-xl font-serif font-bold text-white tracking-wide">Armenia</span>
+                        <span class="text-xl font-serif font-bold text-gradient-gold tracking-wide">Visa</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#hero" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_home">Home</a>
+                    <a href="#services" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_services">Services</a>
+                    <a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_about">About Us</a>
+                    <a href="#process" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_process">Process</a>
+                    <a href="#testimonials" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_testimonials">Testimonials</a>
+                    <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all duration-300" data-i18n="nav_contact">Contact</a>
+                </div>
+
+                <!-- Language Switcher + CTA -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <div class="flex bg-navy-900/80 rounded-lg p-1 border border-white/10">
+                        <button class="lang-btn active px-3 py-1 rounded-md text-xs font-medium" onclick="switchLang('en')" data-lang-btn="en">EN</button>
+                        <button class="lang-btn px-3 py-1 rounded-md text-xs font-medium" onclick="switchLang('hy')" data-lang-btn="hy">ՀՅ</button>
+                        <button class="lang-btn px-3 py-1 rounded-md text-xs font-medium" onclick="switchLang('ru')" data-lang-btn="ru">RU</button>
+                    </div>
+                    <a href="https://wa.me/37443700380" target="_blank" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold text-navy-950 flex items-center space-x-2">
+                        <i class="fab fa-instagram"></i>
+                        <span data-i18n="nav_cta">Contact Us</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden items-center space-x-3">
+                    <div class="flex bg-navy-900/80 rounded-lg p-0.5 border border-white/10">
+                        <button class="lang-btn active px-2 py-1 rounded-md text-xs font-medium" onclick="switchLang('en')" data-lang-btn-mob="en">EN</button>
+                        <button class="lang-btn px-2 py-1 rounded-md text-xs font-medium" onclick="switchLang('hy')" data-lang-btn-mob="hy">ՀՅ</button>
+                        <button class="lang-btn px-2 py-1 rounded-md text-xs font-medium" onclick="switchLang('ru')" data-lang-btn-mob="ru">RU</button>
+                    </div>
+                    <button id="menuToggle" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex flex-col items-center justify-center space-y-1.5 group">
+                        <span class="menu-line w-5 h-0.5 bg-gold-400 transition-all duration-300 origin-center"></span>
+                        <span class="menu-line w-5 h-0.5 bg-gold-400 transition-all duration-300"></span>
+                        <span class="menu-line w-3 h-0.5 bg-gold-400 transition-all duration-300 origin-center self-end mr-2.5"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-navy-950/98 backdrop-blur-xl z-50 p-8 pt-24">
+        <button id="menuClose" class="absolute top-6 right-6 w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+            <i class="fas fa-times text-gold-400"></i>
+        </button>
+        <div class="space-y-2">
+            <a href="#hero" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_home">Home</a>
+            <a href="#services" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_services">Services</a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_about">About Us</a>
+            <a href="#process" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_process">Process</a>
+            <a href="#testimonials" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_testimonials">Testimonials</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-lg font-medium text-gray-300 hover:text-gold-400 hover:bg-white/5 transition-all" data-i18n="nav_contact">Contact</a>
+        </div>
+        <div class="mt-8 pt-8 border-t border-white/10">
+            <a href="https://wa.me/37443700380" target="_blank" class="btn-primary block px-6 py-3 rounded-full text-center font-semibold text-navy-950">
+                <i class="fab fa-instagram mr-2"></i>
+                <span data-i18n="nav_cta">Contact Us</span>
+            </a>
+            <div class="flex items-center justify-center space-x-4 mt-6">
+                <a href="tel:+37443700380" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-navy-900 transition-all">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://wa.me/37443700380" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-navy-900 transition-all">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/amnvisa__" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-navy-900 transition-all">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center hero-pattern overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl floating-element"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-navy-500/10 rounded-full blur-3xl floating-element delay"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-gold-500/10 rounded-full"></div>
+        </div>
+
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0 globe-pattern opacity-30"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 animate-on-scroll">
+                        <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                        <span class="text-sm font-medium text-gold-400" data-i18n="hero_badge">Your Trusted Travel Partner</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight animate-on-scroll delay-1">
+                        <span data-i18n="hero_title_1">Open the World</span><br>
+                        <span class="text-gradient-gold" data-i18n="hero_title_2">One Visa at a Time</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-lg animate-on-scroll delay-2" data-i18n="hero_desc">
+                        Professional visa assistance for USA & Schengen zones, plus premium air ticket booking. Your journey begins with us.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 animate-on-scroll delay-3">
+                        <a href="tel:+37443700380" class="btn-primary px-8 py-4 rounded-full text-center font-semibold text-navy-950 flex items-center justify-center space-x-2">
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="hero_cta_call">Call Us Now</span>
+                        </a>
+                        <a href="https://instagram.com/amnvisa__" target="_blank" class="px-8 py-4 rounded-full text-center font-semibold border-2 border-gold-400/30 text-gold-400 hover:bg-gold-400/10 transition-all flex items-center justify-center space-x-2">
+                            <i class="fab fa-instagram"></i>
+                            <span data-i18n="hero_cta_insta">Instagram</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="flex items-center space-x-6 pt-4 animate-on-scroll delay-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-400/20 border-2 border-navy-900 flex items-center justify-center text-gold-400 text-xs font-bold">A</div>
+                            <div class="w-10 h-10 rounded-full bg-navy-500/30 border-2 border-navy-900 flex items-center justify-center text-gray-300 text-xs font-bold">M</div>
+                            <div class="w-10 h-10 rounded-full bg-gold-400/20 border-2 border-navy-900 flex items-center justify-center text-gold-400 text-xs font-bold">K</div>
+                            <div class="w-10 h-10 rounded-full bg-navy-500/30 border-2 border-navy-900 flex items-center justify-center text-gray-300 text-xs font-bold">+</div>
+                        </div>
+                        <div>
+                            <div class="flex text-gold-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-0.5" data-i18n="hero_trust">500+ Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="relative hidden lg:block">
+                    <div class="relative">
+                        <!-- Main card -->
+                        <div class="relative bg-gradient-to-br from-navy-900/80 to-navy-800/80 backdrop-blur-xl rounded-3xl border border-white/10 p-8 floating-element">
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl rotate-12"></div>
+                            <div class="absolute -top-2 -right-2 w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl rotate-12 opacity-30"></div>
+
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 border border-gold-400/30 flex items-center justify-center">
+                                        <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white" data-i18n="hero_card_title">Visa Services</h3>
+                                        <p class="text-sm text-gray-400" data-i18n="hero_card_desc">USA & Schengen Zone</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                        <span class="text-sm" data-i18n="hero_item_1">B1/B2 Tourist Visa</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                        <span class="text-sm" data-i18n="hero_item_2">Schengen Short Stay</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-white/5 border border-white/5">
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                        <span class="text-sm" data-i18n="hero_item_3">Air Ticket Booking</span>
+                                    </div>
+                                </div>
+
+                                <a href="https://instagram.com/amnvisa__" target="_blank" class="block w-full py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 font-semibold text-center hover:shadow-lg hover:shadow-gold-500/30 transition-all">
+                                    <span data-i18n="hero_card_btn">Start Your Journey →</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Floating badges -->
+                        <div class="absolute -left-8 top-1/3 floating-element delay bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400" data-i18n="hero_badge_1">Success Rate</p>
+                                    <p class="text-lg font-bold text-gold-400">98%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -right-4 bottom-10 floating-element delay2 bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                                    <i class="fas fa-clock text-green-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400" data-i18n="hero_badge_2">Processing</p>
+                                    <p class="text-lg font-bold text-white" data-i18n="hero_badge_2_val">Fast & Easy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2 animate-bounce">
+            <span class="text-xs text-gray-500" data-i18n="scroll_down">Scroll Down</span>
+            <div class="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
+                <div class="w-1.5 h-3 rounded-full bg-gold-400 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="relative py-16 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center animate-on-scroll">
+                    <div class="text-4xl sm:text-5xl font-bold text-gradient-gold counter-value" data-target="500">0</div>
+                    <p class="text-sm text-gray-400 mt-2" data-i18n="stat_1">Visas Approved</p>
+                </div>
+                <div class="text-center animate-on-scroll delay-1">
+                    <div class="text-4xl sm:text-5xl font-bold text-gradient-gold counter-value" data-target="1200">0</div>
+                    <p class="text-sm text-gray-400 mt-2" data-i18n="stat_2">Tickets Sold</p>
+                </div>
+                <div class="text-center animate-on-scroll delay-2">
+                    <div class="text-4xl sm:text-5xl font-bold text-gradient-gold counter-value" data-target="25">0</div>
+                    <p class="text-sm text-gray-400 mt-2" data-i18n="stat_3">Countries Covered</p>
+                </div>
+                <div class="text-center animate-on-scroll delay-3">
+                    <div class="text-4xl sm:text-5xl font-bold text-gradient-gold counter-value" data-target="8">0</div>
+                    <p class="text-sm text-gray-400 mt-2" data-i18n="stat_4">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative py-24 overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-navy-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6 animate-on-scroll">
+                    <i class="fas fa-concierge-bell text-gold-400 text-sm"></i>
+                    <span class="text-sm font-medium text-gold-400" data-i18n="services_badge">Our Services</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 animate-on-scroll delay-1">
+                    <span data-i18n="services_title_1">Comprehensive Travel</span> <span class="text-gradient-gold" data-i18n="services_title_2">Solutions</span>
+                </h2>
+                <p class="text-gray-400 text-lg animate-on-scroll delay-2" data-i18n="services_desc">From visa applications to flight bookings, we handle every detail of your journey with expertise and care.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- USA Visa -->
+                <div class="service-card bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll">
+                    <div class="relative">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30 flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-blue-400" viewBox="0 0 48 48" fill="none">
+                                <rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="24" cy="20" r="6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 14h4M14 18h4M30 14h4M30 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-xl"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4" data-i18n="service_usa_title">USA Visa</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="service_usa_desc">Complete assistance for B1/B2 tourist and business visas. We guide you through every step from document preparation to interview coaching.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_usa_1">Document preparation</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_usa_2">DS-160 form filling</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_usa_3">Interview preparation</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_usa_4">Appointment scheduling</span>
+                        </li>
+                    </ul>
+                    <a href="https://instagram.com/amnvisa__" target="_blank" class="btn-primary w-full py-3 rounded-xl text-center font-semibold text-navy-950 flex items-center justify-center space-x-2">
+                        <span data-i18n="service_apply">Apply Now</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Schengen Visa -->
+                <div class="service-card bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll delay-1 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-gold-400 text-navy-900 text-xs font-bold" data-i18n="popular_badge">Popular</div>
+                    <div class="relative">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold-500/20 to-gold-600/20 border border-gold-500/30 flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-gold-400" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gold-500/10 to-transparent rounded-full blur-xl"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4" data-i18n="service_schengen_title">Schengen Visa</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="service_schengen_desc">Access 27 European countries with our expert Schengen visa services. We ensure your application is complete and compelling.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_schengen_1">All 27 EU countries</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_schengen_2">Travel insurance guidance</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_schengen_3">Hotel & itinerary planning</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_schengen_4">Fast-track processing</span>
+                        </li>
+                    </ul>
+                    <a href="https://instagram.com/amnvisa__" target="_blank" class="btn-primary w-full py-3 rounded-xl text-center font-semibold text-navy-950 flex items-center justify-center space-x-2">
+                        <span data-i18n="service_apply">Apply Now</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Air Tickets -->
+                <div class="service-card bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll delay-2">
+                    <div class="relative">
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30 flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-green-400" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-green-500/10 to-transparent rounded-full blur-xl"></div>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4" data-i18n="service_tickets_title">Air Tickets</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="service_tickets_desc">Best deals on domestic and international flights. We compare prices across airlines to find you the most economical options.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_tickets_1">Best price guarantee</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_tickets_2">All major airlines</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_tickets_3">Group discounts</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-sm text-gray-300">
+                            <i class="fas fa-check-circle text-gold-400"></i>
+                            <span data-i18n="service_tickets_4">24/7 booking support</span>
+                        </li>
+                    </ul>
+                    <a href="tel:+37443700380" class="btn-primary w-full py-3 rounded-xl text-center font-semibold text-navy-950 flex items-center justify-center space-x-2">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                        <span data-i18n="service_book">Book Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-24 bg-gradient-to-b from-navy-950 via-navy-900/50 to-navy-950">
+        <div class="absolute inset-0 globe-pattern opacity-20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual -->
+                <div class="relative animate-on-scroll">
+                    <div class="relative bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl border border-white/10 p-8 overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/10 rounded-full blur-3xl"></div>
+
+                        <!-- Office illustration -->
+                        <div class="relative space-y-6">
+                            <div class="flex items-center justify-center">
+                                <div class="relative">
+                                    <div class="w-48 h-48 rounded-full bg-gradient-to-br from-gold-400/20 to-navy-500/20 border border-gold-400/30 flex items-center justify-center">
+                                        <svg class="w-24 h-24 text-gold-400" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center rotate-12">
+                                        <i class="fas fa-globe-americas text-navy-900 text-xl"></i>
+                                    </div>
+                                    <div class="absolute -bottom-2 -left-2 w-12 h-12 bg-gradient-to-br from-navy-500 to-navy-600 rounded-xl flex items-center justify-center -rotate-12">
+                                        <i class="fas fa-passport text-gold-400 text-xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <div class="text-2xl font-bold text-gold-400 mb-1">98%</div>
+                                    <div class="text-xs text-gray-400" data-i18n="about_stat_1">Approval Rate</div>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <div class="text-2xl font-bold text-gold-400 mb-1">8+</div>
+                                    <div class="text-xs text-gray-400" data-i18n="about_stat_2">Years Active</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="space-y-8">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 animate-on-scroll">
+                        <i class="fas fa-building text-gold-400 text-sm"></i>
+                        <span class="text-sm font-medium text-gold-400" data-i18n="about_badge">About Us</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold animate-on-scroll delay-1">
+                        <span data-i18n="about_title_1">Your Gateway to the</span> <span class="text-gradient-gold" data-i18n="about_title_2">World</span>
+                    </h2>
+
+                    <p class="text-gray-400 text-lg leading-relaxed animate-on-scroll delay-2" data-i18n="about_desc1">
+                        Based in the heart of Armenia, we are a trusted travel agency specializing in visa assistance and air ticket booking. Our mission is to make international travel accessible and stress-free for every client.
+                    </p>
+
+                    <p class="text-gray-400 leading-relaxed animate-on-scroll delay-3" data-i18n="about_desc2">
+                        With years of experience and a deep understanding of immigration processes, we've helped hundreds of Armenians realize their dreams of traveling, studying, and doing business abroad.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 animate-on-scroll delay-4">
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-shield-alt text-gold-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1" data-i18n="about_feat_1_title">Trusted & Reliable</h4>
+                                <p class="text-xs text-gray-400" data-i18n="about_feat_1_desc">Licensed and certified travel professionals</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-gold-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1" data-i18n="about_feat_2_title">24/7 Support</h4>
+                                <p class="text-xs text-gray-400" data-i18n="about_feat_2_desc">Always available when you need us</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-hand-holding-usd text-gold-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1" data-i18n="about_feat_3_title">Fair Pricing</h4>
+                                <p class="text-xs text-gray-400" data-i18n="about_feat_3_desc">Transparent fees with no hidden costs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-language text-gold-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1" data-i18n="about_feat_4_title">Multilingual</h4>
+                                <p class="text-xs text-gray-400" data-i18n="about_feat_4_desc">Service in Armenian, Russian & English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="relative py-24 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6 animate-on-scroll">
+                    <i class="fas fa-tasks text-gold-400 text-sm"></i>
+                    <span class="text-sm font-medium text-gold-400" data-i18n="process_badge">How It Works</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 animate-on-scroll delay-1">
+                    <span data-i18n="process_title_1">Simple</span> <span class="text-gradient-gold" data-i18n="process_title_2">4-Step Process</span>
+                </h2>
+                <p class="text-gray-400 text-lg animate-on-scroll delay-2" data-i18n="process_desc">We've streamlined the visa application process to make it as easy as possible for you.</p>
+            </div>
+
+            <!-- Steps -->
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="relative animate-on-scroll">
+                    <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 border border-gold-400/30 flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl font-bold text-gradient-gold">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3" data-i18n="step_1_title">Consultation</h3>
+                        <p class="text-sm text-gray-400" data-i18n="step_1_desc">Contact us via phone or Instagram to discuss your travel needs and visa requirements.</p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 text-gold-400/30">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="relative animate-on-scroll delay-1">
+                    <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 border border-gold-400/30 flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl font-bold text-gradient-gold">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3" data-i18n="step_2_title">Documentation</h3>
+                        <p class="text-sm text-gray-400" data-i18n="step_2_desc">We help you prepare all required documents and fill out application forms correctly.</p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 text-gold-400/30">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="relative animate-on-scroll delay-2">
+                    <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 border border-gold-400/30 flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl font-bold text-gradient-gold">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3" data-i18n="step_3_title">Submission</h3>
+                        <p class="text-sm text-gray-400" data-i18n="step_3_desc">We submit your application and schedule your embassy appointment.</p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 text-gold-400/30">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll delay-3">
+                    <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 border border-gold-400/30 flex items-center justify-center mx-auto mb-6">
+                            <span class="text-2xl font-bold text-gradient-gold">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3" data-i18n="step_4_title">Approval</h3>
+                        <p class="text-sm text-gray-400" data-i18n="step_4_desc">Receive your visa and start planning your trip. We can also book your flights!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="relative py-24 bg-gradient-to-b from-navy-950 via-navy-900/50 to-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6 animate-on-scroll">
+                    <i class="fas fa-quote-left text-gold-400 text-sm"></i>
+                    <span class="text-sm font-medium text-gold-400" data-i18n="testimonials_badge">Testimonials</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 animate-on-scroll delay-1">
+                    <span data-i18n="testimonials_title_1">What Our</span> <span class="text-gradient-gold" data-i18n="testimonials_title_2">Clients Say</span>
+                </h2>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic leading-relaxed" data-i18n="testimonial_1_text">"They made my USA visa process incredibly smooth. From document preparation to interview coaching, everything was handled professionally. Highly recommended!"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400/30 to-gold-600/30 flex items-center justify-center text-gold-400 font-bold">AH</div>
+                        <div>
+                            <p class="font-semibold text-sm">Anna Hovhannisyan</p>
+                            <p class="text-xs text-gray-500" data-i18n="testimonial_1_loc">Yerevan, Armenia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll delay-1">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic leading-relaxed" data-i18n="testimonial_2_text">"Got my Schengen visa for France thanks to Armenia Visa. They found me the best flight deals too. The whole experience was excellent from start to finish."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400/30 to-blue-600/30 flex items-center justify-center text-blue-400 font-bold">DM</div>
+                        <div>
+                            <p class="font-semibold text-sm">David Mkrtchyan</p>
+                            <p class="text-xs text-gray-500" data-i18n="testimonial_2_loc">Gyumri, Armenia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 animate-on-scroll delay-2">
+                    <div class="flex text-gold-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic leading-relaxed" data-i18n="testimonial_3_text">"Professional, fast, and very supportive. They answered all my questions in Armenian and made the complex visa process feel simple. Thank you!"</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400/30 to-green-600/30 flex items-center justify-center text-green-400 font-bold">MK</div>
+                        <div>
+                            <p class="font-semibold text-sm">Maria Karapetyan</p>
+                            <p class="text-xs text-gray-500" data-i18n="testimonial_3_loc">Vanadzor, Armenia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 globe-pattern opacity-20"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6 animate-on-scroll">
+                    <i class="fas fa-envelope text-gold-400 text-sm"></i>
+                    <span class="text-sm font-medium text-gold-400" data-i18n="contact_badge">Get In Touch</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 animate-on-scroll delay-1">
+                    <span data-i18n="contact_title_1">Let's Start Your</span> <span class="text-gradient-gold" data-i18n="contact_title_2">Journey</span>
+                </h2>
+                <p class="text-gray-400 text-lg animate-on-scroll delay-2" data-i18n="contact_desc">Reach out to us through any channel. We're here to help you every step of the way.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <a href="tel:+37443700380" class="group bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500 animate-on-scroll">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold-400/10 to-gold-600/10 border border-gold-400/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-phone-alt text-3xl text-gold-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="contact_phone_title">Call Us</h3>
+                    <p class="text-gold-400 font-semibold text-lg mb-2">+374 43 700 380</p>
+                    <p class="text-sm text-gray-400" data-i18n="contact_phone_hours">Mon-Sat: 9:00 AM - 6:00 PM</p>
+                    <div class="mt-4 text-sm text-gold-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span data-i18n="contact_tap">Tap to call →</span>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/amnvisa__" target="_blank" class="group bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500 animate-on-scroll delay-1">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-instagram text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Instagram</h3>
+                    <p class="text-gold-400 font-semibold text-lg mb-2">@amnvisa__</p>
+                    <p class="text-sm text-gray-400" data-i18n="contact_insta_desc">DM us for quick responses</p>
+                    <div class="mt-4 text-sm text-gold-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span data-i18n="contact_tap">Tap to message →</span>
+                    </div>
+                </a>
+
+                <!-- Address -->
+                <div class="group bg-gradient-to-br from-navy-900/60 to-navy-800/60 backdrop-blur-xl rounded-3xl border border-white/5 p-8 text-center hover:border-gold-400/30 transition-all duration-500 animate-on-scroll delay-2">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-500/20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-map-marker-alt text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="contact_address_title">Visit Our Office</h3>
+                    <p class="text-gold-400 font-semibold text-lg mb-2" data-i18n="contact_address_value">Mashtots 5, Yerevan</p>
+                    <p class="text-sm text-gray-400" data-i18n="contact_address_desc">1st Floor</p>
+                    <div class="mt-4 text-sm text-gold-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-directions mr-1"></i>
+                        <span data-i18n="contact_directions">Get Directions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 relative overflow-hidden rounded-3xl bg-gradient-to-r from-gold-500 to-gold-600 p-8 sm:p-12 animate-on-scroll">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                <div class="relative z-10 text-center">
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-navy-900 mb-4" data-i18n="cta_title">Ready to Start Your Journey?</h3>
+                    <p class="text-navy-800/80 text-lg mb-8 max-w-2xl mx-auto" data-i18n="cta_desc">Contact us today and let our experts handle your visa application and travel arrangements.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:+37443700380" class="inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full bg-navy-900 text-white font-semibold hover:bg-navy-800 transition-all shadow-lg hover:shadow-xl">
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-i18n="cta_call">Call Now</span>
+                        </a>
+                        <a href="https://instagram.com/amnvisa__" target="_blank" class="inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full bg-white/20 text-navy-900 font-semibold hover:bg-white/30 transition-all">
+                            <i class="fab fa-instagram"></i>
+                            <span data-i18n="cta_insta">Message on Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-16 bg-navy-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <a href="#hero" class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-navy-900" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-lg font-serif font-bold text-white">Travel</span>
+                            <span class="text-lg font-serif font-bold text-gradient-gold">Visa</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6" data-i18n="footer_desc">Your trusted partner for visa services and air ticket booking in Armenia.</p>
+                    <div class="flex space-x-3">
+                        <a href="https://instagram.com/amnvisa__" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold-400 hover:border-gold-400/30 transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/37443700380" target="_blank" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold-400 hover:border-gold-400/30 transition-all">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+37443700380" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-gold-400 hover:border-gold-400/30 transition-all">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6" data-i18n="footer_services">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="footer_s1">USA Visa Assistance</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="footer_s2">Schengen Visa</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="footer_s3">Air Ticket Booking</a></li>
+                        <li><a href="#services" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="footer_s4">Travel Insurance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6" data-i18n="footer_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="#process" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="nav_process">Process</a></li>
+                        <li><a href="#testimonials" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="nav_testimonials">Testimonials</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-400 hover:text-gold-400 transition-colors" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6" data-i18n="footer_contact">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-gold-400 mt-1"></i>
+                            <span class="text-sm text-gray-400" data-i18n="contact_address_value">Mashtots st 5, Yerevan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-gold-400"></i>
+                            <a href="tel:+37443700380" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">+374 43 700 380</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fab fa-instagram text-gold-400"></i>
+                            <a href="https://instagram.com/amnvisa__" target="_blank" class="text-sm text-gray-400 hover:text-gold-400 transition-colors">@amnvisa__</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-gold-400"></i>
+                            <span class="text-sm text-gray-400" data-i18n="footer_hours">Mon-Sat: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-gray-500" data-i18n="footer_copyright">© 2026 Armenia Visa & Travel. All rights reserved.</p>
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs text-gray-600" data-i18n="footer_made">Made with</span>
+                    <i class="fas fa-heart text-gold-400 text-xs"></i>
+                    <span class="text-xs text-gray-600" data-i18n="footer_armenia">in Armenia</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA (Mobile) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden">
+        <div class="flex">
+            <a href="tel:+37443700380" class="flex-1 py-4 bg-navy-900/95 backdrop-blur-xl border-t border-white/10 text-center text-gold-400 font-semibold flex items-center justify-center space-x-2">
+                <i class="fas fa-phone-alt"></i>
+                <span data-i18n="mobile_cta_call">Call Us</span>
+            </a>
+            <a href="https://instagram.com/amnvisa__" target="_blank" class="flex-1 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-center text-navy-900 font-semibold flex items-center justify-center space-x-2">
+                <i class="fab fa-instagram"></i>
+                <span data-i18n="mobile_cta_insta">Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_services: "Services",
+                nav_about: "About Us",
+                nav_process: "Process",
+                nav_testimonials: "Testimonials",
+                nav_contact: "Contact",
+                nav_cta: "Contact Us",
+                hero_badge: "Your Trusted Travel Partner",
+                hero_title_1: "Open the World",
+                hero_title_2: "One Visa at a Time",
+                hero_desc: "Professional visa assistance for USA & Schengen zones, plus premium air ticket booking. Your journey begins with us.",
+                hero_cta_call: "Call Us Now",
+                hero_cta_insta: "Instagram",
+                hero_trust: "500+ Happy Clients",
+                hero_card_title: "Visa Services",
+                hero_card_desc: "USA & Schengen Zone",
+                hero_item_1: "B1/B2 Tourist Visa",
+                hero_item_2: "Schengen Short Stay",
+                hero_item_3: "Air Ticket Booking",
+                hero_card_btn: "Start Your Journey →",
+                hero_badge_1: "Success Rate",
+                hero_badge_2: "Processing",
+                hero_badge_2_val: "Fast & Easy",
+                scroll_down: "Scroll Down",
+                stat_1: "Visas Approved",
+                stat_2: "Tickets Sold",
+                stat_3: "Countries Covered",
+                stat_4: "Years Experience",
+                services_badge: "Our Services",
+                services_title_1: "Comprehensive Travel",
+                services_title_2: "Solutions",
+                services_desc: "From visa applications to flight bookings, we handle every detail of your journey with expertise and care.",
+                service_usa_title: "USA Visa",
+                service_usa_desc: "Complete assistance for B1/B2 tourist and business visas. We guide you through every step from document preparation to interview coaching.",
+                service_usa_1: "Document preparation",
+                service_usa_2: "DS-160 form filling",
+                service_usa_3: "Interview preparation",
+                service_usa_4: "Appointment scheduling",
+                service_schengen_title: "Schengen Visa",
+                service_schengen_desc: "Access 27 European countries with our expert Schengen visa services. We ensure your application is complete and compelling.",
+                service_schengen_1: "All 27 EU countries",
+                service_schengen_2: "Travel insurance guidance",
+                service_schengen_3: "Hotel & itinerary planning",
+                service_schengen_4: "Fast-track processing",
+                service_tickets_title: "Air Tickets",
+                service_tickets_desc: "Best deals on domestic and international flights. We compare prices across airlines to find you the most economical options.",
+                service_tickets_1: "Best price guarantee",
+                service_tickets_2: "All major airlines",
+                service_tickets_3: "Group discounts",
+                service_tickets_4: "Booking support",
+                service_apply: "Apply Now",
+                service_book: "Book Now",
+                popular_badge: "Popular",
+                about_badge: "About Us",
+                about_title_1: "Your Gateway to the",
+                about_title_2: "World",
+                about_desc1: "Based in the heart of Armenia, we are a trusted travel agency specializing in visa assistance and air ticket booking. Our mission is to make international travel accessible and stress-free for every client.",
+                about_desc2: "With years of experience and a deep understanding of immigration processes, we've helped hundreds of Armenians realize their dreams of traveling, studying, and doing business abroad.",
+                about_feat_1_title: "Trusted & Reliable",
+                about_feat_1_desc: "Professionals of the sphere",
+                about_feat_2_title: "Quick Support",
+                about_feat_2_desc: "Always available when you need us",
+                about_feat_3_title: "Fair Pricing",
+                about_feat_3_desc: "Transparent fees with no hidden costs",
+                about_feat_4_title: "Multilingual",
+                about_feat_4_desc: "Service in Armenian, Russian & English",
+                about_stat_1: "Approval Rate",
+                about_stat_2: "Years Active",
+                process_badge: "How It Works",
+                process_title_1: "Simple",
+                process_title_2: "4-Step Process",
+                process_desc: "We've streamlined the visa application process to make it as easy as possible for you.",
+                step_1_title: "Consultation",
+                step_1_desc: "Contact us via phone or Instagram to discuss your travel needs and visa requirements.",
+                step_2_title: "Documentation",
+                step_2_desc: "We help you prepare all required documents and fill out application forms correctly.",
+                step_3_title: "Submission",
+                step_3_desc: "We submit your application and schedule your embassy appointment.",
+                step_4_title: "Approval",
+                step_4_desc: "Receive your visa and start planning your trip. We can also book your flights!",
+                testimonials_badge: "Testimonials",
+                testimonials_title_1: "What Our",
+                testimonials_title_2: "Clients Say",
+                testimonial_1_text: "\"They made my USA visa process incredibly smooth. From document preparation to interview coaching, everything was handled professionally. Highly recommended!\"",
+                testimonial_1_loc: "Yerevan, Armenia",
+                testimonial_2_text: "\"Got my Schengen visa for France thanks to Armenia Visa. They found me the best flight deals too. The whole experience was excellent from start to finish.\"",
+                testimonial_2_loc: "Gyumri, Armenia",
+                testimonial_3_text: "\"Professional, fast, and very supportive. They answered all my questions in Armenian and made the complex visa process feel simple. Thank you!\"",
+                testimonial_3_loc: "Vanadzor, Armenia",
+                contact_badge: "Get In Touch",
+                contact_title_1: "Let's Start Your",
+                contact_title_2: "Journey",
+                contact_desc: "Reach out to us through any channel. We're here to help you every step of the way.",
+                contact_phone_title: "Call Us",
+                contact_phone_hours: "Mon-Sat: 9:00 AM - 6:00 PM",
+                contact_insta_desc: "DM us for quick responses",
+                contact_tap: "Tap to call →",
+                contact_address_title: "Visit Our Office",
+                contact_address_value: "Mashtots St. 5, Yerevan",
+                contact_address_desc: "1st Floor",
+                contact_directions: "Get Directions",
+                cta_title: "Ready to Start Your Journey?",
+                cta_desc: "Contact us today and let our experts handle your visa application and travel arrangements.",
+                cta_call: "Call Now",
+                cta_insta: "Message on Instagram",
+                footer_desc: "Your trusted partner for visa services and air ticket booking in Armenia.",
+                footer_services: "Services",
+                footer_s1: "USA Visa Assistance",
+                footer_s2: "Schengen Visa",
+                footer_s3: "Air Ticket Booking",
+                footer_s4: "Travel Insurance",
+                footer_links: "Quick Links",
+                footer_contact: "Contact Info",
+                footer_hours: "Mon-Sat: 9:00 - 18:00",
+                footer_copyright: "© 2026 Armenia Visa & Travel. All rights reserved.",
+                footer_made: "Made with",
+                footer_armenia: "in Armenia",
+                mobile_cta_call: "Call Us",
+                mobile_cta_insta: "Instagram"
+            },
+            hy: {
+                nav_home: "Գլխավոր",
+                nav_services: "Ծառայություններ",
+                nav_about: "Մեր մասին",
+                nav_process: "Ընթացք",
+                nav_testimonials: "Գնահատականներ",
+                nav_contact: "Կապ",
+                nav_cta: "Կապ մեզ հետ",
+                hero_badge: "Ձեր վստահելի ճանապարհորդության գործընկերը",
+                hero_title_1: "Բացահայտեք աշխարհը",
+                hero_title_2: "Մեր պրոֆեսիոնալ աջակցությամբ",
+                hero_desc: "Պրոֆեսիոնալ վիզային օգնություն ԱՄՆ և Շենգեն գոտիների համար, ինչպես նաև ավիատոմսերի վաճառք: Ձեր ճանապարհորդությունը սկսվում է մեզ հետ:",
+                hero_cta_call: "Զանգահարեք մեզ",
+                hero_cta_insta: "Instagram",
+                hero_trust: "500+ գոհ հաճախորդ",
+                hero_card_title: "Վիզային ծառայություններ",
+                hero_card_desc: "ԱՄՆ և Շենգեն գոտի",
+                hero_item_1: "B1/B2 զբոսաշրջային վիզա",
+                hero_item_2: "Շենգեն կարճաժամկետ",
+                hero_item_3: "Ավիատոմսերի պատվեր",
+                hero_card_btn: "Սկսեք ձեր ճանապարհորդությունը →",
+                hero_badge_1: "Հաջողության մակարդակ",
+                hero_badge_2: "Մշակում",
+                hero_badge_2_val: "Արագ և հեշտ",
+                scroll_down: "Ցածր գլորեք",
+                stat_1: "Հաստատված վիզաներ",
+                stat_2: "Վաճառված տոմսեր",
+                stat_3: "Երկրներ",
+                stat_4: "Տարվա փորձ",
+                services_badge: "Մեր ծառայությունները",
+                services_title_1: "Համապարփակ ճանապարհորդության",
+                services_title_2: "Լուծումներ",
+                services_desc: "Վիզայի դիմումից մինչև թռիչքի պատվեր՝ մենք հոգում ենք ձեր ճանապարհորդության յուրաքանչյուր մանրամասն:",
+                service_usa_title: "ԱՄՆ Վիզա",
+                service_usa_desc: "Ամբողջական օգնություն B1/B2 զբոսաշրջային և բիզնես վիզաների համար: Մենք ուղեկցում ենք ձեզ փաստաթղթերի պատրաստումից մինչև հարցազրույցի նախապատրաստում:",
+                service_usa_1: "Փաստաթղթերի պատրաստում",
+                service_usa_2: "DS-160 ձևաթղթի լրացում",
+                service_usa_3: "Հարցազրույցի նախապատրաստում",
+                service_usa_4: "Ժամադրության ամրագրում",
+                service_schengen_title: "Շենգեն Վիզա",
+                service_schengen_desc: "Հասանելիություն 27 եվրոպական երկրներ՝ մեր Շենգեն վիզայի փորձագիտական ծառայություններով:",
+                service_schengen_1: "Բոլոր 27 ԵՄ երկրներ",
+                service_schengen_2: "Ճանապարհորդության ապահովագրություն",
+                service_schengen_3: "Հյուրանոցի և երթուղու պլանավորում",
+                service_schengen_4: "Արագ մշակում",
+                service_tickets_title: "Ավիատոմսեր",
+                service_tickets_desc: "Լավագույն գները ներքին և միջազգային թռիչքների համար: Մենք համեմատում ենք գները բոլոր ավիաընկերությունների միջև:",
+                service_tickets_1: "Լավագույն գնի երաշխիք",
+                service_tickets_2: "Բոլոր խոշոր ավիաընկերություններ",
+                service_tickets_3: "Խմբային զեղչեր",
+                service_tickets_4: "Մշտական աջակցություն",
+                service_apply: "Դիմել հիմա",
+                service_book: "Պատվիրել հիմա",
+                popular_badge: "Տարածված",
+                about_badge: "Մեր մասին",
+                about_title_1: "Ձեր օգնականը դեպի",
+                about_title_2: "Աշխարհ",
+                about_desc1: "Հիմնված Հայաստանի սրտում՝ մենք վստահելի ճանապարհորդական գործակալություն ենք՝ մասնագիտացած վիզային օգնության և ավիատոմսերի վաճառքի մեջ:",
+                about_desc2: "Տարիների փորձով և ներգաղթային գործընթացների խորը ըմբռնումով՝ մենք օգնել ենք հարյուրավոր հայերի իրականացնել իրենց երազանքները:",
+                about_feat_1_title: "Վստահելի և հուսալի",
+                about_feat_1_desc: "Փորձառու մասնագետներ",
+                about_feat_2_title: "Աջակցություն",
+                about_feat_2_desc: "Միշտ հասանելի, երբ ձեզ անհրաժեշտ ենք",
+                about_feat_3_title: "Արդար գնագոյացում",
+                about_feat_3_desc: "Թափանցիկ վճարներ՝ առանց թաքնված ծախսերի",
+                about_feat_4_title: "Բազմալեզու",
+                about_feat_4_desc: "Սպասարկում հայերեն, ռուսերեն և անգլերեն",
+                about_stat_1: "Հաստատումների մակարդակ",
+                about_stat_2: "Տարի շուկայում",
+                process_badge: "Ինչպես է աշխատում",
+                process_title_1: "Պարզ",
+                process_title_2: "4 քայլանոց գործընթաց",
+                process_desc: "Մենք պարզեցրել ենք վիզայի դիմումի գործընթացը՝ այն ձեզ համար հնարավորինս հեշտ դարձնելու համար:",
+                step_1_title: "Խորհրդատվություն",
+                step_1_desc: "Կապվեք մեզ հետ հեռախոսով կամ Instagram-ով՝ քննարկելու ձեր ճանապարհորդական կարիքները:",
+                step_2_title: "Փաստաթղթեր",
+                step_2_desc: "Մենք օգնում ենք պատրաստել բոլոր անհրաժեշտ փաստաթղթերը և ճիշտ լրացնել դիմումները:",
+                step_3_title: "Ներկայացում",
+                step_3_desc: "Մենք ներկայացնում ենք ձեր դիմումը և ամրագրում դեսպանատան ժամադրությունը:",
+                step_4_title: "Հաստատում",
+                step_4_desc: "Ստացեք ձեր վիզան և սկսեք ճանապարհորդության պլանավորումը:",
+                testimonials_badge: "Գնահատականներ",
+                testimonials_title_1: "Ինչ են ասում",
+                testimonials_title_2: "Մեր հաճախորդները",
+                testimonial_1_text: "\"Նրանք իմ ԱՄՆ վիզայի գործընթացը դարձրին չափազանց հարթ: Փաստաթղթերի պատրաստումից մինչև հարցազրույցի նախապատրաստում՝ ամեն ինչ պրոֆեսիոնալ կերպով էր կազմակերպված:\"",
+                testimonial_1_loc: "Երևան, Հայաստան",
+                testimonial_2_text: "\"Ստացա իմ Շենգեն վիզան Ֆրանսիայի համար Armenia Visa-ի շնորհիվ: Նրանք նաև լավագույն թռիչքի գները գտան ինձ համար:\"",
+                testimonial_2_loc: "Գյումրի, Հայաստան",
+                testimonial_3_text: "\"Պրոֆեսիոնալ, արագ և շատ աջակցող: Նրանք պատասխանեցին բոլոր հարցերիս հայերեն և բարդ վիզայի գործընթացը դարձրին պարզ:\"",
+                testimonial_3_loc: "Վանաձոր, Հայաստան",
+                contact_badge: "Կապ մեզ հետ",
+                contact_title_1: "Եկեք սկսենք ձեր",
+                contact_title_2: "Ճանապարհորդությունը",
+                contact_desc: "Կապվեք մեզ հետ ցանկացած ալիքով: Մենք այստեղ ենք՝ օգնելու ձեզ յուրաքանչյուր քայլափոխի:",
+                contact_phone_title: "Զանգահարեք մեզ",
+                contact_phone_hours: "Երկ-Շաբ: 9:00 - 18:00",
+                contact_insta_desc: "Գրեք մեզ արագ պատասխանների համար",
+                contact_tap: "Սեղմեք զանգահարելու համար →",
+                contact_address_title: "Այցելեք մեր գրասենյակ",
+                contact_address_value: "Մաշտոցի փ. 5, Երևան",
+                contact_address_desc: "1-ին հարկ",
+                contact_directions: "Ուղղություններ",
+                cta_title: "Պատրա՞ստ եք սկսել ձեր ճանապարհորդությունը:",
+                cta_desc: "Կապվեք մեզ հետ այսօր և թույլ տվեք մեր փորձագետներին կարգավորել ձեր վիզայի դիմումը և ճանապարհորդական կազմակերպումները:",
+                cta_call: "Զանգահարել",
+                cta_insta: "Գրել Instagram-ում",
+                footer_desc: "Ձեր վստահելի գործընկերը վիզային ծառայությունների և ավիատոմսերի վաճառքի համար Հայաստանում:",
+                footer_services: "Ծառայություններ",
+                footer_s1: "ԱՄՆ վիզայի օգնություն",
+                footer_s2: "Շենգեն վիզա",
+                footer_s3: "Ավիատոմսերի պատվեր",
+                footer_s4: "Ճանապարհորդության ապահովագրություն",
+                footer_links: "Արագ հղումներ",
+                footer_contact: "Կապի տվյալներ",
+                footer_hours: "Երկ-Շաբ: 9:00 - 18:00",
+                footer_copyright: "© 2026 Armenia Visa & Travel. Բոլոր իրավունքները պաշտպանված են:",
+                footer_made: "Պատրաստված է",
+                footer_armenia: "Հայաստանում",
+                mobile_cta_call: "Զանգ",
+                mobile_cta_insta: "Instagram"
+            },
+            ru: {
+                nav_home: "Главная",
+                nav_services: "Услуги",
+                nav_about: "О нас",
+                nav_process: "Процесс",
+                nav_testimonials: "Отзывы",
+                nav_contact: "Контакты",
+                nav_cta: "Связаться с нами",
+                hero_badge: "Ваш надёжный партнёр в путешествиях",
+                hero_title_1: "Откройте мир",
+                hero_title_2: "Одна виза за раз",
+                hero_desc: "Профессиональная визовая поддержка для США и Шенгенской зоны, а также премиальное бронирование авиабилетов. Ваше путешествие начинается с нами.",
+                hero_cta_call: "Позвоните нам",
+                hero_cta_insta: "Instagram",
+                hero_trust: "500+ довольных клиентов",
+                hero_card_title: "Визовые услуги",
+                hero_card_desc: "США и Шенгенская зона",
+                hero_item_1: "Туристическая виза B1/B2",
+                hero_item_2: "Шенген краткосрочный",
+                hero_item_3: "Бронирование авиабилетов",
+                hero_card_btn: "Начните своё путешествие →",
+                hero_badge_1: "Успешность",
+                hero_badge_2: "Оформление",
+                hero_badge_2_val: "Быстро и легко",
+                scroll_down: "Прокрутите вниз",
+                stat_1: "Виз одобрено",
+                stat_2: "Билетов продано",
+                stat_3: "Стран охвачено",
+                stat_4: "Лет опыта",
+                services_badge: "Наши услуги",
+                services_title_1: "Комплексные",
+                services_title_2: "Решения для путешествий",
+                services_desc: "От визовых заявлений до бронирования рейсов — мы заботимся о каждой детали вашего путешествия.",
+                service_usa_title: "Виза в США",
+                service_usa_desc: "Полная помощь в оформлении туристических и бизнес виз B1/B2. Мы сопровождаем вас на каждом этапе — от подготовки документов до подготовки к собеседованию.",
+                service_usa_1: "Подготовка документов",
+                service_usa_2: "Заполнение формы DS-160",
+                service_usa_3: "Подготовка к собеседованию",
+                service_usa_4: "Запись на приём",
+                service_schengen_title: "Шенгенская виза",
+                service_schengen_desc: "Доступ в 27 европейских стран с нашими экспертными шенгенскими визовыми услугами. Мы гарантируем полноту и убедительность вашей заявки.",
+                service_schengen_1: "Все 27 стран ЕС",
+                service_schengen_2: "Консультация по страхованию",
+                service_schengen_3: "Планирование отеля и маршрута",
+                service_schengen_4: "Ускоренная обработка",
+                service_tickets_title: "Авиабилеты",
+                service_tickets_desc: "Лучшие предложения на внутренние и международные рейсы. Мы сравниваем цены всех авиакомпаний для поиска самых выгодных вариантов.",
+                service_tickets_1: "Гарантия лучшей цены",
+                service_tickets_2: "Все крупные авиакомпании",
+                service_tickets_3: "Групповые скидки",
+                service_tickets_4: "Поддержка бронирования",
+                service_apply: "Подать заявку",
+                service_book: "Забронировать",
+                popular_badge: "Популярно",
+                about_badge: "О нас",
+                about_title_1: "Ваш путь к",
+                about_title_2: "Миру",
+                about_desc1: "Расположенные в самом сердце Армении, мы являемся надёжным туристическим агентством, специализирующимся на визовой поддержке и бронировании авиабилетов.",
+                about_desc2: "Благодаря многолетнему опыту и глубокому пониманию иммиграционных процессов, мы помогли сотням армян реализовать свои мечты о путешествиях, учёбе и бизнесе за рубежом.",
+                about_feat_1_title: "Надёжность и доверие",
+                about_feat_1_desc: "Профессиональные специалисты",
+                about_feat_2_title: "Поддержка",
+                about_feat_2_desc: "Всегда доступны, когда мы вам нужны",
+                about_feat_3_title: "Справедливые цены",
+                about_feat_3_desc: "Прозрачные тарифы без скрытых расходов",
+                about_feat_4_title: "Многоязычность",
+                about_feat_4_desc: "Обслуживание на армянском, русском и английском",
+                about_stat_1: "Уровень одобрения",
+                about_stat_2: "Лет работы",
+                process_badge: "Как это работает",
+                process_title_1: "Простой",
+                process_title_2: "4-шаговый процесс",
+                process_desc: "Мы упростили процесс подачи визового заявления, чтобы сделать его максимально удобным для вас.",
+                step_1_title: "Консультация",
+                step_1_desc: "Свяжитесь с нами по телефону или Instagram для обсуждения ваших потребностей и визовых требований.",
+                step_2_title: "Документы",
+                step_2_desc: "Мы помогаем подготовить все необходимые документы и правильно заполнить формы заявок.",
+                step_3_title: "Подача",
+                step_3_desc: "Мы подаём вашу заявку и записываем вас на приём в посольство.",
+                step_4_title: "Получение визы",
+                step_4_desc: "Получите визу и начните планировать поездку. Мы также можем забронировать ваши рейсы!",
+                testimonials_badge: "Отзывы",
+                testimonials_title_1: "Что говорят",
+                testimonials_title_2: "Наши клиенты",
+                testimonial_1_text: "\"Они сделали процесс получения визы в США невероятно гладким. От подготовки документов до подготовки к собеседованию — всё было организовано профессионально. Настоятельно рекомендую!\"",
+                testimonial_1_loc: "Ереван, Армения",
+                testimonial_2_text: "\"Получил шенгенскую визу во Францию благодаря Armenia Visa. Они также нашли для меня лучшие предложения на рейсы. Весь опыт был отличным от начала до конца.\"",
+                testimonial_2_loc: "Гюмри, Армения",
+                testimonial_3_text: "\"Профессионально, быстро и очень поддерживающе. Они ответили на все мои вопросы на армянском и сделали сложный визовый процесс простым. Спасибо!\"",
+                testimonial_3_loc: "Ванадзор, Армения",
+                contact_badge: "Свяжитесь с нами",
+                contact_title_1: "Начнём ваше",
+                contact_title_2: "Путешествие",
+                contact_desc: "Свяжитесь с нами через любой канал. Мы здесь, чтобы помочь вам на каждом шагу.",
+                contact_phone_title: "Позвоните нам",
+                contact_phone_hours: "Пн-Сб: 9:00 - 18:00",
+                contact_insta_desc: "Напишите нам для быстрого ответа",
+                contact_tap: "Нажмите, чтобы позвонить →",
+                contact_address_title: "Посетите наш офис",
+                contact_address_value: "ул. Маштоца 5, Ереван",
+                contact_address_desc: "1-й этаж",
+                contact_directions: "Как добраться",
+                cta_title: "Готовы начать своё путешествие?",
+                cta_desc: "Свяжитесь с нами сегодня, и наши эксперты займутся оформлением вашей визы и организацией поездки.",
+                cta_call: "Позвонить",
+                cta_insta: "Написать в Instagram",
+                footer_desc: "Ваш надёжный партнёр по визовым услугам и бронированию авиабилетов в Армении.",
+                footer_services: "Услуги",
+                footer_s1: "Виза в США",
+                footer_s2: "Шенгенская виза",
+                footer_s3: "Бронирование авиабилетов",
+                footer_s4: "Страхование путешествий",
+                footer_links: "Быстрые ссылки",
+                footer_contact: "Контактная информация",
+                footer_hours: "Пн-Сб: 9:00 - 18:00",
+                footer_copyright: "© 2026 Armenia Visa & Travel. Все права защищены.",
+                footer_made: "Сделано с",
+                footer_armenia: "в Армении",
+                mobile_cta_call: "Позвонить",
+                mobile_cta_insta: "Instagram"
+            }
+        };
+
+        let currentLang = 'en';
+
+        // Language switcher
+        function switchLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            // Update language buttons
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang-btn') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            document.querySelectorAll('[data-lang-btn-mob]').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang-btn-mob') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update font for Armenian
+            if (lang === 'hy') {
+                document.body.style.fontFamily = "'Noto Sans Armenian', 'Inter', sans-serif";
+            } else {
+                document.body.style.fontFamily = "'Inter', 'Noto Sans Armenian', sans-serif";
+            }
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function openMenu() {
+            mobileMenu.classList.add('open');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Counter animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = target / 60;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target + '+';
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.counter-value').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Plane animation on scroll
+        let planeTriggered = false;
+        window.addEventListener('scroll', () => {
+            if (!planeTriggered && window.scrollY > 300) {
+                planeTriggered = true;
+                const plane = document.getElementById('planeAnim');
+                plane.style.animation = 'plane-fly 4s ease-in-out forwards';
+                setTimeout(() => {
+                    plane.style.animation = '';
+                    planeTriggered = false;
+                }, 4000);
+            }
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-gold-400');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-gold-400');
+                }
+            });
+        });
+
+        // Parallax effect on scroll for floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            document.querySelectorAll('.floating-element').forEach((el, index) => {
+                const speed = 0.02 + (index * 0.01);
+                el.style.transform = `translateY(${Math.sin(scrolled * speed) * 10}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
