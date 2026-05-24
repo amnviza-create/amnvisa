@@ -281,16 +281,20 @@
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#hero" class="flex items-center space-x-3 group">
-                    <div class="relative">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-                            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                            </svg>
-                        </div>
-                        <div class="absolute inset-0 rounded-full bg-gold-400 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300"></div>
-                    </div>
+                <!-- ============================================================ -->
+                <!-- 🔽🔽🔽 REPLACE YOUR LOGO IMAGE HERE 🔽🔽🔽                     -->
+                <!-- Find the <a> tag with id="logoLink" below and change the      -->
+                <!-- src="..." attribute to your own logo image URL/path           -->
+                <!-- Example: src="/images/my-logo.png" or "https://..."           -->
+                <!-- ============================================================ -->
+                <a href="#hero" id="logoLink" class="flex items-center space-x-3 group">
+                    <!-- REPLACE THE src BELOW WITH YOUR OWN IMAGE URL -->
+                    <img 
+                        src="https://cdn.shopify.com/s/files/1/0992/7334/3289/files/5231265618617637532_1.png?v=1779658582' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%23d4a843'/%3E%3Cpath d='M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z' fill='%231a2744' transform='translate(6,5) scale(0.75)'/%3E%3C/svg%3E" 
+                        alt="Armenia Visa Logo" 
+                        class="w-12 h-12 rounded-full object-cover transform group-hover:rotate-12 transition-transform duration-300"
+                    />
+                    <!-- 🔼🔼🔼 END OF LOGO IMAGE REPLACEMENT AREA 🔼🔼🔼 -->
                     <div>
                         <span class="text-xl font-serif font-bold text-white tracking-wide">Armenia</span>
                         <span class="text-xl font-serif font-bold text-gradient-gold tracking-wide">Visa</span>
@@ -314,8 +318,9 @@
                         <button class="lang-btn px-3 py-1 rounded-md text-xs font-medium" onclick="switchLang('hy')" data-lang-btn="hy">ՀՅ</button>
                         <button class="lang-btn px-3 py-1 rounded-md text-xs font-medium" onclick="switchLang('ru')" data-lang-btn="ru">RU</button>
                     </div>
+                    <!-- CHANGED: Instagram icon → WhatsApp icon -->
                     <a href="https://wa.me/37443700380" target="_blank" class="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold text-navy-950 flex items-center space-x-2">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-whatsapp"></i>
                         <span data-i18n="nav_cta">Contact Us</span>
                     </a>
                 </div>
@@ -352,7 +357,7 @@
         </div>
         <div class="mt-8 pt-8 border-t border-white/10">
             <a href="https://wa.me/37443700380" target="_blank" class="btn-primary block px-6 py-3 rounded-full text-center font-semibold text-navy-950">
-                <i class="fab fa-instagram mr-2"></i>
+                <i class="fab fa-whatsapp mr-2"></i>
                 <span data-i18n="nav_cta">Contact Us</span>
             </a>
             <div class="flex items-center justify-center space-x-4 mt-6">
@@ -474,8 +479,8 @@
                             </div>
                         </div>
 
-                        <!-- Floating badges -->
-                        <div class="absolute -left-8 top-1/3 floating-element delay bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4">
+                        <!-- Floating badges - FIXED: adjusted positions to prevent overlapping -->
+                        <div class="absolute -left-12 top-8 floating-element delay bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4 z-20">
                             <div class="flex items-center space-x-3">
                                 <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
                                     <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
@@ -487,7 +492,7 @@
                             </div>
                         </div>
 
-                        <div class="absolute -right-4 bottom-10 floating-element delay2 bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4">
+                        <div class="absolute -right-8 bottom-16 floating-element delay2 bg-navy-900/90 backdrop-blur-xl rounded-2xl border border-white/10 p-4 z-20">
                             <div class="flex items-center space-x-3">
                                 <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
                                     <i class="fas fa-clock text-green-400"></i>
